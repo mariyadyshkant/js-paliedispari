@@ -6,7 +6,12 @@ console.log(`L'utente ha scelto: ${userChoice}`);
 const userNumber = Number(prompt("Scegli un numero da 1 a 5."));
 console.log(`L'utente ha scelto il numero: ${userNumber}`);
 
-if (1 >= userNumber <= 5) { }
+if (1 >= userNumber <= 5) {
+    console.log("Continuiamo...");
+
+} else {
+    alert("Attenzione! Il numero da te scelto deve essere compreso tra 1 e 5.")
+}
 
 // Generiamo un numero random per il computer usando una funzione.
 function getRandomNumber(min, max) {
