@@ -2,15 +2,16 @@
 
 // Facciamo scegliere all'utente pari o dispari e poi un numero da 1 a 5. Creiamo due prompt.
 const userChoice = prompt("Pari o dispari?");
-const userNumber = Number(prompt("Scegli un numero da 1 a 5."));
+let userNumber = Number(prompt("Scegli un numero da 1 a 5."));
 console.log(`L'utente ha scelto il numero: ${userNumber}`);
 
-// if (1 >= userNumber <= 5) {
-//     console.log("Continuiamo...");
+if (userNumber >= 1 && userNumber <= 5) {
+    console.log("Continuiamo...");
+} else {
+    alert("Attenzione! Il numero da te scelto deve essere compreso tra 1 e 5.");
+    userNumber = Number(prompt("Scegli un numero da 1 a 5."));
+}
 
-// } else {
-//     alert("Attenzione! Il numero da te scelto deve essere compreso tra 1 e 5.")
-// }
 
 // Generiamo un numero random per il computer usando una funzione.
 function getRandomNumber(min, max) {
